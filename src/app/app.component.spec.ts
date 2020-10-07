@@ -1,8 +1,11 @@
-import { TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
-describe('AppComponent', () => {
+let comp: AppComponent;
+let fixture: ComponentFixture<AppComponent>;
+
+describe('AppComponent  & TestModule', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
@@ -11,7 +14,11 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
-    }).compileComponents();
+    }).compileComponents()
+    .then(() => {
+      fixture = TestBed.createComponent(AppComponent);
+      comp = fixture.componentInstance;
+    });
   });
 
   it('should create the app', () => {
