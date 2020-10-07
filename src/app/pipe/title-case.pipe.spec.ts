@@ -4,23 +4,23 @@ describe('TitleCasePipe', () => {
   
   const pipe = new TitleCasePipe();
 
-  it('transforms "abc" to "Abc"', () => {
-    expect(pipe.transform('abc')).toBe('Abc');
+  it('transforms "anish" to "Anish"', () => {
+    expect(pipe.transform('anish')).toBe('Anish');
   });
 
-  it('transforms "abc def" to "Abc Def"', () => {
-    expect(pipe.transform('abc def')).toBe('Abc Def');
-  });
-  
-  it('leaves "Abc Def" unchanged', () => {
-    expect(pipe.transform('Abc Def')).toBe('Abc Def');
+  it('transforms "anish def" to "Anish Def"', () => {
+    expect(pipe.transform('anish def')).toBe('Anish Def');
   });
 
-  it('transforms "abc-def" to "Abc-def"', () => {
-    expect(pipe.transform('abc-def')).toBe('Abc-def');
+  it('leaves "Anish Def" unchanged', () => {
+    expect(pipe.transform('Anish Def')).toBe('Anish Def');
   });
 
-  it('transforms "   abc   def" to "   Abc   Def" (preserves spaces) ', () => {
-    expect(pipe.transform('   abc   def')).toBe('   Abc   Def');
+  it('transforms "anish-def" to "Anish-def"', () => {
+    expect(pipe.transform('anish-def')).toBe('Anish-def');
+  });
+
+  it('transforms "   anish   def" to "   Anish   Def" (preserves spaces) ', () => {
+    expect(pipe.transform('   anish   def')).toBe('   Anish   Def');
   });
 });
