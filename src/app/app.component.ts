@@ -31,3 +31,14 @@ export class AppComponent implements OnInit {
     return user;
   }
 }
+
+export class VinayVerma {
+  a;
+  constructor() {
+    let b;
+    if (1 === 1) {
+      this.a = 'b'?b.toString():'';
+    }
+  }
+
+}
