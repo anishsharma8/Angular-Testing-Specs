@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { PipeModule } from './pipe/pipe.module';
 import { TestComponent } from './test/test.component';
 import { UserComponent } from './user/user.component';
+import { DemoComponent } from './demo/demo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    TestComponent
+    TestComponent,
+    DemoComponent
   ],
   imports: [
     BrowserModule,
